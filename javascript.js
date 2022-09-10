@@ -90,6 +90,7 @@ const calculate = () => {
 const equalsBut = document.querySelector('#equals');
 equalsBut.addEventListener('click', function () {
   calculate();
+  console.log("is equal to " + currentOperand.textContent);
 });
 
 const allClearbut = document.querySelector('#allClear');
