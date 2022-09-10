@@ -116,6 +116,16 @@ function addDecimal() {
     return parseFloat(storedValue, 10);
   }
 }
+const zeroButton = document.querySelector("#zero");
+zeroButton.addEventListener("click", () => {
+ onlyOneZero();
+ addZero.disabled == true;
+})
+function onlyOneZero(){
+  if (previousOperand.textContent.includes("0") === false) {
+    previousOperand.textContent += "0";
+ }
+}
 
 /*const percentageBut = document.querySelector(".percentage")
 percentageBut.addEventListener("click", () => {
