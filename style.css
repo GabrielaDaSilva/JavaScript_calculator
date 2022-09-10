@@ -1,0 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+/**::before, *::after => The ::before and ::after pseudo-elements in CSS allows you to insert content onto a page without it needing to be in the HTML*/
+body {
+  padding: 0;
+  margin: 0;
+  background-color:white;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+/*The min-height CSS property sets the minimum height of an element. 
+ Min height 100vh means the element should occupy the web browser viewport height. This is always 100 percent of the web browser's viewport height.
+It prevents the used value of the height property from becoming smaller than the value specified for min-height.
+The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max. It is used with CSS Grids.
+*/
+
+.spanTwo {
+  grid-column: span 2;
+}
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid darkgrey;
+  outline: none;
+  background-color:cadetblue;
+}
+
+.display-screen {
+  grid-column: 1 / -1;
+  background-color: darkgrey;
+  display: flex;
+  align-items: flex-end; /* aligns text to the right*/
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+}
+/* grid-column 1/ -1 refers to the first column until the last column, Allowing the display screen to span across the buttons.
+*/
+.display-screen .previous-operand {
+  color:aliceblue;
+  font-size: 30px;
+}
+
+.display-screen .current-operand {
+  color: white;
+  font-size: 30px;
+}
