@@ -35,7 +35,7 @@ The minmax() CSS function defines a size range greater than or equal to min and 
   background-color:cadetblue;
 }
 
-.display-screen {
+.display {
   grid-column: 1 / -1;
   background-color: darkgrey;
   display: flex;
