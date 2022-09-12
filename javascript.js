@@ -78,7 +78,7 @@ function compute() {
     firstNumber += secondNumber;
   } else if (operator === "-") {
     firstNumber -= secondNumber;
-  } else if (operator === "x") {
+  } else if (operator === "*") {
     firstNumber *= secondNumber;
   } else if (operator === "/") {
     if (secondNumber <= 0) {
